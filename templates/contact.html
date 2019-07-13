@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+
+    <!-- Page Header -->
+      <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/contact-bg.jpg') }}')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+              <h1>Contact Me</h1>
+              {% for post in list1 %}
+              <span class="subheading">{{ post }}</span>
+               {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+
+<div class="container">
+    {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-success" role="alert">
+  {{message}}
+   </div>
+    {% endfor %}
+  {% endif %}
+  {% endwith %}
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>if you want to contact me then plz fill this form...and submit it {{ a }}</p>
+          <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
+          <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
+          <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
+           <form action="/contact" method='post'>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="name" class="form-control" id="name" placeholder="Enter your Name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your Email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Your Phone Number (with country code)</label>
+
+                    <input type="tel" class="form-control" id="phone" placeholder="Enter your Phone Number" name="phone" pattern="[7-9]{1}[0-9]{9}" title="Phone number with 7-9 and remaing 9 digit with 0-9" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Describe what you want to contact me for here</label>
+                    <textarea type="text" class="form-control" id="description" placeholder="Description" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-danger">Submit</button>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
+
+   {% endblock %}
