@@ -15,9 +15,9 @@
 
     "no_of_posts": 3,
     "login_image":"login.svg",
-    "admin_user":"shubham",
-    "admin_password": "pandey",
-    "upload_location":"C:\\Users\\Shubham\\PycharmProjects\\let us code\\static\\img"
+    "admin_user":"deepak",
+    "admin_password": "tiwari",
+    "upload_location":"C:\\Users\\Tiwari\\PycharmProjects\\let us code\\static\\img"
 
 
   }
