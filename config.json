@@ -2,13 +2,12 @@
   "params":
   {
     "local_server":"True",
-    "local_uri": "mysql://root:@localhost/myblog",
-    "prod_uri":"mysql://root:@localhost/myblog",
+    "local_uri": "mysql://root:@localhost/blog",
+    "prod_uri":"mysql://root:@localhost/blog",
     "fb_url":"https://facebook.com/My blog",
     "tw_url":"https://twitter.com/myblog",
-    "gh_url": "https://github.com/myblog",
- 
-"tag_line": "let us read posts",
+    "gh_url": "https://github.com/deepak3698",
+    "tag_line": "let us read posts",
     "gmail-user":"deepaktiwari@gmail.com",
     "gmail-password":"password",
     "about_text": "",
